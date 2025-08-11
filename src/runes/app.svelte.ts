@@ -1,7 +1,7 @@
-import type { Setting } from "types";
+import type { Setting } from 'types';
 
 export let settings: Setting = $state({
-  passphrase: "",
-  syferMode: "encrypt",
+  passphrase: 'hello world !',
+  syferMode: 'encrypt',
   hardwareConcurrency: window.navigator.hardwareConcurrency,
 });

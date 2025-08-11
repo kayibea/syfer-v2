@@ -1,4 +1,4 @@
-import type { syferModes } from "constants/app";
+import type { syferModes } from 'constants/app';
 
 export type SyferMode = (typeof syferModes)[number];
 
@@ -16,11 +16,11 @@ export type fileQueueItem = {
 };
 
 export enum FileStatus {
-  Pending = "Pending",
-  Processing = "Processing",
-  Completed = "Completed",
-  Failed = "Failed",
+  Pending = 'Pending',
+  Processing = 'Processing',
+  Completed = 'Completed',
+  Failed = 'Failed',
   // Canceled = "Canceled",
   // Paused = "Paused",
-  Delisted = "Delisted",
+  Delisted = 'Delisted',
 }

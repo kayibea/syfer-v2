@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { syferModes } from "constants/app";
-  import { settings } from "runes/app.svelte";
+  import { syferModes } from 'constants/app';
+  import { settings } from 'runes/app.svelte';
 
   type Props = {
     start: () => void;
@@ -17,14 +17,12 @@
       bind:value={settings.passphrase}
       onmouseenter={() => (isMouseOverPass = true)}
       onmouseleave={() => (isMouseOverPass = false)}
-      type={isMouseOverPass ? "text" : "password"}
+      type={isMouseOverPass ? 'text' : 'password'}
       placeholder="Passphrase"
     />
     <select bind:value={settings.syferMode}>
       {#each syferModes as mode}
-        <option value={mode}
-          >{mode.charAt(0).toUpperCase() + mode.slice(1).toLowerCase()}</option
-        >
+        <option value={mode}>{mode.charAt(0).toUpperCase() + mode.slice(1).toLowerCase()}</option>
       {/each}
     </select>
     <button onclick={start}>Start</button>

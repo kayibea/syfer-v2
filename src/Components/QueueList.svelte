@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { formatFileSize } from "utils/util";
-  import { FileStatus, type fileQueueItem } from "types";
+  import { formatFileSize } from 'utils/util';
+  import { FileStatus, type fileQueueItem } from 'types';
 
   type Props = {
     fileQueue: fileQueueItem[];
@@ -22,9 +22,7 @@
     if (
       !item ||
       (item.status === FileStatus.Processing &&
-        !window.confirm(
-          "Remove this file? This will cancel the ongoing operation on this file."
-        ))
+        !window.confirm('Remove this file? This will cancel the ongoing operation on this file.'))
     )
       return;
 
@@ -53,10 +51,7 @@
             <td>{item.status}</td>
             <td>
               <div class="progress-bar">
-                <div
-                  style:width="${item.progress}"
-                  class="progress-bar-fill"
-                ></div>
+                <div style:width="${item.progress}" class="progress-bar-fill"></div>
               </div>
             </td>
             <td>

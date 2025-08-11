@@ -1,6 +1,6 @@
 <script lang="ts">
   // import type { Setting } from "types";
-  import { settings } from "runes/app.svelte";
+  import { settings } from 'runes/app.svelte';
 
   // type Props = {
   //   settings: Setting;
@@ -27,12 +27,7 @@
         (hardwareConcurrency = parseInt((e.target as HTMLInputElement).value))} -->
   <label>
     Threads:
-    <input
-      bind:value={settings.hardwareConcurrency}
-      type="range"
-      min="1"
-      max={window.navigator.hardwareConcurrency}
-    />
+    <input bind:value={settings.hardwareConcurrency} type="range" min="1" max={window.navigator.hardwareConcurrency} />
     <span>{settings.hardwareConcurrency}</span>
   </label>
 </section>

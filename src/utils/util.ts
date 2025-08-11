@@ -1,11 +1,9 @@
-// export const get
-
 export const makeId = (): string => Math.random().toString(36).slice(2, 10);
 
 export const formatFileSize = (bytes: number): string => {
-  if (bytes < 0) throw new Error("File size cannot be negative");
+  if (bytes < 0) throw new Error('File size cannot be negative');
 
-  const units = ["B", "KB", "MB", "GB", "TB", "PB"];
+  const units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
   let size = bytes;
   let unitIndex = 0;
 
