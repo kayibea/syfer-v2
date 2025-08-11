@@ -1,5 +1,6 @@
 <script lang="ts">
   import { FileStatus, type fileQueueItem } from "types";
+  import { makeId } from "utils/util";
 
   type Props = {
     fileQueue: fileQueueItem[];
@@ -13,10 +14,10 @@
   function appendFiles(files: FileList) {
     for (const file of files) {
       fileQueue.push({
-        id: window.crypto.randomUUID(),
+        id: makeId(),
         file,
         progress: 0,
-        status: FileStatus.Processing,
+        status: FileStatus.Pending,
       });
     }
   }
